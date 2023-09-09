@@ -16,6 +16,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -61,12 +62,16 @@ public class LinkedInDataCollection {
 			e.printStackTrace();
 		}
 	}
-
+ 
 	public static WebDriver setChromeDriver() {
 		WebDriverManager.chromedriver().setup();
-		return new ChromeDriver();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		
+		return new ChromeDriver(options);
 	}
-
+            //click using javascript //
 	public static void clickElementWithJS(WebElement element) {
 		JavascriptExecutor j = (JavascriptExecutor) driver;
 		j.executeScript("arguments[0].click();", element);
@@ -186,7 +191,7 @@ public class LinkedInDataCollection {
 			else {
 			System.out.println("No Experience Added");}
 			
-			r++;
+			r++; 
 			c = 0;
 		}
 
