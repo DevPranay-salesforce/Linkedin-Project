@@ -147,10 +147,16 @@ public class LinkedInDataCollection {
 					break;
 				}
 				
+				String str =  webElement2.getAttribute("innerText").trim();
+				if(str.contains("sent the following message")){
+					msg = msg +"\n"+"\n";
+				}	
+				
 				msg = msg + webElement2.getAttribute("innerText").trim()+"\n";
 				
 				
 			}
+			
 			LinkedInDataCollection.writeInToExcelFile(msg, r, c);
 			c++;
 			//waitForSeconds(2);

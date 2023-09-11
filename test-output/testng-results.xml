@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-11T07:08:46Z" name="Default suite" finished-at="2023-09-11T07:15:02Z" duration-ms="375945">
+  <suite started-at="2023-09-11T11:50:40Z" name="Default suite" finished-at="2023-09-11T11:57:00Z" duration-ms="379606">
     <groups>
     </groups>
-    <test started-at="2023-09-11T07:08:46Z" name="Default test" finished-at="2023-09-11T07:15:02Z" duration-ms="375945">
+    <test started-at="2023-09-11T11:50:40Z" name="Default test" finished-at="2023-09-11T11:57:00Z" duration-ms="379606">
       <class name="LinkedInPackage.LinkedInDataCollection">
-        <test-method signature="extractDataFromLinkedIn()[pri:0, instance:LinkedInPackage.LinkedInDataCollection@539d019]" started-at="2023-09-11T07:08:46Z" name="extractDataFromLinkedIn" finished-at="2023-09-11T07:15:02Z" duration-ms="375924" status="PASS">
+        <test-method signature="extractDataFromLinkedIn()[pri:0, instance:LinkedInPackage.LinkedInDataCollection@539d019]" started-at="2023-09-11T11:50:40Z" name="extractDataFromLinkedIn" finished-at="2023-09-11T11:57:00Z" duration-ms="379588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extractDataFromLinkedIn -->
