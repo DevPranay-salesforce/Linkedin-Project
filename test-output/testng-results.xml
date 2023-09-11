@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-11T07:08:46Z" name="Default suite" finished-at="2023-09-11T07:15:02Z" duration-ms="375945">
+    <groups>
+    </groups>
+    <test started-at="2023-09-11T07:08:46Z" name="Default test" finished-at="2023-09-11T07:15:02Z" duration-ms="375945">
+      <class name="LinkedInPackage.LinkedInDataCollection">
+        <test-method signature="extractDataFromLinkedIn()[pri:0, instance:LinkedInPackage.LinkedInDataCollection@539d019]" started-at="2023-09-11T07:08:46Z" name="extractDataFromLinkedIn" finished-at="2023-09-11T07:15:02Z" duration-ms="375924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extractDataFromLinkedIn -->
+      </class> <!-- LinkedInPackage.LinkedInDataCollection -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
