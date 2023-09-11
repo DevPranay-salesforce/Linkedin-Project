@@ -59,7 +59,7 @@ public class LinkedInDataCollection {
 
 			System.out.println("Data written successfully!");
 		} catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
  
@@ -67,7 +67,7 @@ public class LinkedInDataCollection {
 		WebDriverManager.chromedriver().setup();
 		
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
+		//options.addArguments("--headless");
 		
 		return new ChromeDriver(options);
 	}
@@ -126,7 +126,10 @@ public class LinkedInDataCollection {
 			waitForSeconds(1);
 			webElement.click();
 			waitForSeconds(10);
-			List<WebElement> userMessages = driver.findElements(By.xpath("//div[@class='msg-s-event__content']//p"));
+			//List<WebElement> userMessages = driver.findElements(By.xpath("//div[@class='msg-s-event__content']//p"));
+			
+			List<WebElement> userMessages = driver.findElements(By.xpath("//ul[@class='msg-s-message-list-content list-style-none full-width mbA']//li"));
+			
 			WebElement dispalyUserName = driver.findElement(By.xpath("//a[contains(@href,'/in/') and @class='ember-view']//span"));
 			//System.out.println("Displayed User Name : " + dispalyUserName.getText());
 			LinkedInDataCollection.writeInToExcelFile(dispalyUserName.getText(), r, c);
@@ -137,8 +140,16 @@ public class LinkedInDataCollection {
 			String msg = "";
 			for (WebElement webElement2 : userMessages) {
 				//System.out.println(webElement2.getAttribute("textContent"));
-				msg = msg + " " + webElement2.getAttribute("textContent");
-
+				//msg = msg + "\n" + webElement2.getAttribute("textContent");
+				
+				if(webElement2.getAttribute("innerText").contains("Reply to")) {
+					System.out.println("Reply to if conditions");
+					break;
+				}
+				
+				msg = msg + webElement2.getAttribute("innerText").trim()+"\n";
+				
+				
 			}
 			LinkedInDataCollection.writeInToExcelFile(msg, r, c);
 			c++;
